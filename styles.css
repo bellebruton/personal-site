@@ -1,0 +1,288 @@
+/* BELLA
+================================================================== */
+
+
+
+/* BASE STYLES
+================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #141414;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0 0 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  display: block;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* TYPOGRAPHY
+================================================================== */
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  margin: 0 0 1em 0;
+  
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+}
+
+h3 {
+  font-size: .8em;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+}
+
+h4 {
+  font-size: .9em;
+  font-weight: 600;
+  margin: 0 0 1em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 50%;
+}
+
+
+
+
+/* GRID
+================================================================== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+
+
+/* HEADER
+================================================================== */
+.home-header {
+  background-color: #78878F;
+  min-height: 100vh;
+  display: grid;
+  align-content: space-around;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  margin: 1em auto;
+  padding: 1em;
+}
+
+header a {
+  display: block;
+}
+
+header .grid {
+  align-items: start;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+header .grid a {
+  text-align: center;
+}
+
+
+
+
+/* FOOTER
+================================================================== */
+footer {
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+footer a {
+  display: block;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+/* WORK
+================================================================== */
+.work {
+  padding: 2em 1em;
+}
+
+.work-logo {
+  display: block;
+  width: 5em;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.project {
+  position: relative;
+}
+
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  background: rgba(0,0,0,50%);
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(10em);
+  opacity: 0%;
+  height: 0;
+  overflow-y: hidden;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.project-info-content {
+  max-width: 30em;
+}
+
+.project-image img {
+  display: block;
+  margin: 0;
+}
+
+.project:hover .project-info {
+  opacity: 100%;
+  transform: translateY(0);
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+
+
+
+
+
+/* ABOUT
+================================================================== */
+
+.about-page {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  min-height: 100vh;
+  align-content: space-between;
+}
+
+
+.about {
+  max-width: 900px;
+  margin: 2em auto;
+}
+
+
+.button {
+  font-size: 1.5em;
+  border: 1px solid;
+  padding: 0.25em 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+  display: inline-block;
+  color: black;
+  background-color: white;
+  padding-bottom: 0.125em;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES
+================================================================== */
+@media (min-width: 960px) {
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .span-2 {
+    grid-column-end: span 2;
+  }
+
+  .span-3 {
+    grid-column-end: span 3;
+  }
+
+  header .grid a:first-child,
+  footer .grid a:first-child {
+    text-align: left;
+  }
+  
+  header .grid a:last-child,
+  footer .grid a:last-child {
+    text-align: right;
+  }
+  
+  .project-grid {
+    /* grid-template-columns: 1fr 1fr; */
+  }
+
+}
+
+
+
+
