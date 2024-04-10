@@ -163,7 +163,7 @@ footer a {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
+  gap: 3em;
   padding: 1em;
   align-content: center;
   align-items: center;
