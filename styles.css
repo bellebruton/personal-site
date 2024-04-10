@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 600;
   margin: 0 0 1em 0;
 }
@@ -173,6 +173,7 @@ footer a {
 
 .project {
   position: relative;
+  overflow: hidden;
 }
 
 .project-info {
@@ -182,11 +183,10 @@ footer a {
   width: 100%;
   height: 100%;
   padding: 1em;
-  background: rgba(0,0,0,50%);
+  background: rgba(0,0,0,60%);
   transition: opacity 0.5s, transform 0.5s;
   transform: translateY(10em);
   opacity: 0%;
-  height: 0;
   overflow-y: hidden;
   display: grid;
   justify-content: center;
@@ -205,10 +205,16 @@ footer a {
 .project:hover .project-info {
   opacity: 100%;
   transform: translateY(0);
-  height: 100%;
   overflow-y: auto;
 }
 
+.project-image {
+  transition: all 0.5s;
+  filter: blur(0px);
+}
+.project:hover .project-image {
+  filter: blur(.5px);
+}
 
 
 
@@ -227,19 +233,20 @@ footer a {
 
 
 .about {
-  max-width: 900px;
+  max-width: 800px;
   margin: 2em auto;
+  padding: 1em;
 }
 
 
 .button {
-  font-size: 1.5em;
+  font-size: 1em;
   border: 1px solid;
   padding: 0.25em 1em;
   border-radius: 1em;
   margin-top: 1em;
   display: inline-block;
-  color: black;
+  color: #141414;
   background-color: white;
   padding-bottom: 0.125em;
 }
