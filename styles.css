@@ -33,6 +33,14 @@ img {
   height: auto;
 }
 
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  width: 500px;
+}
+
 
 /* TYPOGRAPHY
 ================================================================== */
@@ -97,7 +105,7 @@ a:hover {
 /* HEADER
 ================================================================== */
 .home-header {
-  background-color: #78878F;
+  background-color: #788992;
   min-height: 100vh;
   display: grid;
   align-content: space-around;
@@ -188,9 +196,6 @@ footer a {
   transform: translateY(10em);
   opacity: 0%;
   overflow-y: hidden;
-  display: grid;
-  justify-content: center;
-  align-content: center;
 }
 
 .project-info-content {
@@ -260,6 +265,16 @@ footer a {
 
 /* MEDIA QUERIES
 ================================================================== */
+
+@media (min-width: 30em) {
+  .project-info {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+
 @media (min-width: 960px) {
 
   .grid {
